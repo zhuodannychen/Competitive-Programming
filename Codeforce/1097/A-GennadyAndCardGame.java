@@ -5,7 +5,7 @@ public class Solution{
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();
 		String hand[] = new String[5];
-		for(int i = 0;i<5;i++){
+		for(int i = 0;i < 5;i++){
 			hand[i] = sc.next();
 		}
 		boolean flag = false;
