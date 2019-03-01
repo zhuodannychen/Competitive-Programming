@@ -1,4 +1,5 @@
-# reference purposes
+//reference purposes
+//Dynamic programming
 class Knapsack {
 
     public static void main(String[] args) throws Exception {
