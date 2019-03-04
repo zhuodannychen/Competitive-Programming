@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class test1
+class Traffic
 {
 	public static void main(String[] args) throws IOException
 	{
