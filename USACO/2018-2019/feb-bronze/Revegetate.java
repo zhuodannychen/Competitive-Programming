@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class test 
+class Revegetate 
 {
 	public static void main(String[] args) throws IOException
 	{
