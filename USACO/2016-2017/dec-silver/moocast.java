@@ -1,3 +1,5 @@
+//using Adjacency List and BFS
+
 import java.util.*;
 import java.io.*;
 
@@ -62,3 +64,57 @@ public class moocast {
         pw.close();
     }
 }
+
+
+//Using Adjacency Matrix and DFS
+/*
+import java.util.*;
+import java.io.*;
+
+public class moocast {
+    public static void main(String[] args) throws IOException{
+        Scanner sc = new Scanner(new File("moocast.in"));
+        int cows = sc.nextInt();
+        int[] x = new int[cows];
+        int[] y = new int[cows];
+        int[] p = new int[cows];
+        for(int i = 0; i < cows; i++) {
+            x[i] = sc.nextInt();
+            y[i] = sc.nextInt();
+            p[i] = sc.nextInt();
+        }
+
+        boolean[][] adjMatrix = new boolean[cows][cows];
+        for(int i = 0; i < cows; i++) {
+            for(int j = 0; j < cows; j++) {
+                if((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]) <= p[i] * p[i])
+                    adjMatrix[i][j] = true;
+            }
+        }
+
+        int max = 0;
+        Stack<Integer> s = new Stack<>();
+        for(int i = 0; i < cows; i++) {
+            boolean[] visited = new boolean[cows];
+            int count = 0;
+            s.add(i);
+            visited[i] = true;
+            while(!s.isEmpty()) {
+                count++;
+                int a = s.pop();
+                for(int j = 0; j < cows; j++) {
+                    if(adjMatrix[a][j] && !visited[j]) {
+                        visited[j] = true;
+                        s.add(j);
+                    }
+                }
+            }
+            max = Math.max(count, max);
+        }
+        System.out.println(max);
+        PrintWriter pw = new PrintWriter("moocast.out");
+        pw.println(max);
+        pw.close();
+    }
+}
+*/
