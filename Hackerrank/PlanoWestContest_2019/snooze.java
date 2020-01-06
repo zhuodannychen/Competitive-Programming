@@ -1,5 +1,6 @@
-//maze checker with bfs
-//By: Eric Zhang
+/**
+ * @author Eric K. Zhang
+ */
 
 import java.util.*;
 import java.io.*;
