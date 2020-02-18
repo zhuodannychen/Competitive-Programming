@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class lisa_broke_up {
+class Solution {
     public static void main(String[] args) {
         System.out.println("      _______ ______\n" +
                 "     -     -      --)\n" +
