@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class escape_valentine {
+public class Solution1 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         int r = sc.nextInt();
