@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution{
+class Solution1 {
     public static final int TOGGLE = 1;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
