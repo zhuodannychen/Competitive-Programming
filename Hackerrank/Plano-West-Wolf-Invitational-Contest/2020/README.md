@@ -1,9 +1,9 @@
 www.hackerrank.com/plano-west-wolf-invitational-advanced-2020
 
-Python Solutions by Danny Chen
+Python Solutions: Danny Chen
 
-Java Solutions by Mark Sturtevant and Eric Zhang
+Java Solutions: Danny Chen, Mark Sturtevant, Eric Zhang
 
-C++ Solutions by Maxwell Jiang
+C++ Solutions: Maxwell Jiang
 
 Editorial hopefully coming soon!
