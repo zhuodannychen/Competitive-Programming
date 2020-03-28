@@ -1,15 +1,16 @@
-[Problems](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7)
+# [Problems](https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7)
 
-# Allocation
+
+### Allocation
 Sort the houses and buy the cheapest houses
 
-# Plates
+### Plates
 Use DP and find dp[n][p].
 n stacks, and p plates total.
 
-# Workout
+### Workout
 Binary search on the optimal answer, and then see how many slots you can fit using the current mid in binary search. If you can fit more, increase low, else decrease high.
 
-# Bundling
+### Bundling
 Use an efficient data structure like Trie, then use DFS and greedily find answer.
-This was similar to a problem called [English](https://www.codechef.com/JAN20A/problems/ENGLISH) on Codechef.
+This was similar to a problem called [ENGLISH](https://www.codechef.com/JAN20A/problems/ENGLISH) on Codechef.
