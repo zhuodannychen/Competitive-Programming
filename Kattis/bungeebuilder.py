@@ -1,40 +1,18 @@
 n = int(input())
-a = list(map(int, input().split()))
+heights = list(map(int, input().split()))
+mxLeft = [0 for x in range(n)]
+mxRight = [0 for x in range(n)]
 
-stack = []
-mnHeight = 10000000
-mxHeight = -100
-ans = 0
-
+mxLeft[0] = heights[0]
 for i in range(n):
-    mxHeight = max(mxHeight, a[i])
-    if a[i] == mxHeight:
-        currMin = 10000000
-        currMax = -100
-        stoppt = -1
-        oriLen = len(stack)
-        while len(stack) > 0:
-            currMin = min(currMin, stack[-1])
-            currMax = max(currMax, stack[-1])
-            stack.pop()
+    mxLeft[i] = max(mxLeft[i-1], heights[i])
+mxRight[-1] = heights[-1]
+for i in range(n-2, -1, -1):
+    mxRight[i] = max(mxRight[i+1], heights[i])
 
-        if oriLen >= 2:
-            ans = max(ans, min(currMax, mxHeight) - currMin)
-
-    stack.append(a[i]) 
-
-currMin = 10000000
-currMax = -100
-while len(stack) > 0:
-    curr = stack.pop()
-    if curr >= currMax:
-        if currMin != 10000000:
-            ans = max(ans, currMax - currMin)
-            currMin = 10000000
-        currMax = curr
-    else:
-        currMin = min(currMin, curr)
-    
-
+ans = 0
+for i in range(n):
+    ans = max(ans, min(mxLeft[i], mxRight[i]) - heights[i])
 print(ans)
-    
+
+
