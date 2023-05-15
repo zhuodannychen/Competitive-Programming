@@ -117,3 +117,77 @@ int main() {
     }
 }
 
+
+/*
+
+TOP-DOWN Approach
+
+int n;
+int heights[50];
+int dp[45][1005], actions[45][1005];
+
+int solve(int idx, int curHeight) {
+    if (idx >= n) {
+        if (curHeight == 0)
+            return 0;
+        return inf;
+    }
+
+    if (curHeight < 0)
+        return inf;
+
+    if (dp[idx][curHeight] != -1)
+        return dp[idx][curHeight];
+
+    int up = max(solve(idx+1, curHeight + heights[idx]), curHeight + heights[idx]);
+    int down = max(solve(idx+1, curHeight - heights[idx]), curHeight - heights[idx]);
+    if (up < down) {
+        dp[idx][curHeight] = up;
+        actions[idx][curHeight] = 1;
+    } else {
+        dp[idx][curHeight] = down;
+        actions[idx][curHeight] = 0;
+    }
+    return min(up, down);
+}
+
+int main() {
+    fastio;
+    int t; cin >> t;
+    while (t--) {
+        cin >> n;
+        int totHeight = 0;
+        f0r (i, n) {
+            cin >> heights[i];
+            totHeight += heights[i];
+        }
+
+        f0r (i, n) {
+            f0r (j, totHeight) {
+                dp[i][j] = -1;
+            }
+        }
+
+        int minHeight = solve(0,0);
+        if (minHeight == inf) {
+            cout << "IMPOSSIBLE\n";
+            continue;
+        }
+
+        int h = 0;
+        string res = "";
+        f0r (i, n) {
+            if (actions[i][h] == 1) {
+                res += 'U';
+                h += heights[i];
+            } else {
+                res += 'D';
+                h -= heights[i];
+            }
+        }
+        cout << res << endl;
+    }
+}
+
+*/
+
